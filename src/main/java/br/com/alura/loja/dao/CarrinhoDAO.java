@@ -1,6 +1,7 @@
 package br.com.alura.loja.dao;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -37,4 +38,8 @@ public class CarrinhoDAO {
 		return banco.remove(id);
 	}
 
+	public List<Carrinho> buscaTodos() {
+		return (List<Carrinho>) banco.values();
+	}
+	
 }
